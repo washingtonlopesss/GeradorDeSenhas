@@ -2,7 +2,7 @@ const caracteresPermitidos = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
 function gerarSenha(comprimento) {
     let senha = '';
-    for (let i = 0; i < comprimento; i++) {
+    for (let i = 1; i <= comprimento; i++) {
         const indice = Math.floor(Math.random() * caracteresPermitidos.length);
         senha += caracteresPermitidos[indice];
     }
