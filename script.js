@@ -62,14 +62,3 @@ document.getElementById('copiarSenha').addEventListener('click', copiarSenha);
 document.getElementById('copiarResultado').addEventListener('click', copiarResultado);
 
 document.getElementById('inputString').addEventListener('input', converterParaMaiusculas);
-
-document.getElementById('toggleSenha').addEventListener('click', function() {
-    const senhaInput = document.getElementById('senha');
-    if (senhaInput.type === 'password') {
-        senhaInput.type = 'text';
-        this.textContent = 'Esconder Senha';
-    } else {
-        senhaInput.type = 'password';
-        this.textContent = 'Mostrar Senha';
-    }
-});
