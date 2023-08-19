@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1137271543974613082/1140719958574252132/image.png">
-    <title>Gerador de Senhas</title>
+    <link rel="icon" type="image/png" href="caneca-de-cerveja.png">
+    <title>Gerador de Senhas e Conversor de Texto</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Gerador de Senhas</h1>
-        <p>Senha gerada: <span id="senha"></span></p>
-        <button id="gerarSenha">Gerar Senha</button>
-        <button id="copiarSenha">Copiar</button>
-    </div>
+    <h1 class="title">Gerador de Senhas & Conversor de Textos</h1>
+    <main class="container">
+        <section>
+            <h2>Gerar senha</h2>
+            <div class="resultPassword">
+                <input id="senha" type="text"></input>
+                <button id="copiarSenha">Copiar</button>
+            </div>
+            <div class="box">
+                <input type="checkbox" id="check">
+                <label for="check">Atualizar automaticamente?</label>
+            </div>
+            <button id="gerarSenha">Gerar Senha</button>
+        </section>
+        <section class="convert">
+            <h2>Converter em Maiúsculas</h2>
+            <input type="text" id="inputString">
+            <div class="caixa">
+                <input type="text" id="resultado"></input>
+                <button id="copiarResultado">Copiar</button>
+            </div>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
