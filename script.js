@@ -45,7 +45,7 @@ document.getElementById('check').addEventListener('click', function() {
         senhaInterval = setInterval(function() {
             const senhaGerada = gerarSenha(4);
             document.getElementById('senha').value = senhaGerada;
-        }, 1000);
+        }, 30000);
     } else {
         clearInterval(senhaInterval);
     }
