@@ -21,23 +21,23 @@ function copiarSenha() {
     document.body.removeChild(tempInput);
 }
 
-function copiarResultado() {
-    const resultado = document.getElementById('resultado').value; // Correção aqui
-    const tempInput = document.createElement('textarea');
-    tempInput.value = resultado; // Correção aqui
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    tempInput.setSelectionRange(0, 99999);
-    document.execCommand('copy');
-    document.body.removeChild(tempInput);
+function converterParaMaiusculas() {
+    const inputElement = document.getElementById('inputString')
+    const resultadoElement = document.getElementById('resultado')
+    const inputString = inputElement.value
+    const stringConvertida = inputString.toUpperCase()
+    resultadoElement.value = stringConvertida
 }
 
-function converterParaMaiusculas() {
-    const inputElement = document.getElementById('inputString');
-    const resultadoElement = document.getElementById('resultado');
-    const inputString = inputElement.value;
-    const stringConvertida = inputString.toUpperCase();
-    resultadoElement.value = stringConvertida;
+function copiarResultado() {
+    const resultado = document.getElementById('resultado').value;
+    const tempInput = document.createElement('textarea');
+    tempInput.value = resultado
+    document.body.appendChild(tempInput)
+    tempInput.select()
+    tempInput.setSelectionRange(0, 99999)
+    document.execCommand('copy')
+    document.body.removeChild(tempInput)
 }
 
 document.getElementById('check').addEventListener('click', function() {
@@ -45,13 +45,11 @@ document.getElementById('check').addEventListener('click', function() {
         senhaInterval = setInterval(function() {
             const senhaGerada = gerarSenha(4);
             document.getElementById('senha').value = senhaGerada;
-        }, 1000);
+    }, 5000)
     } else {
         clearInterval(senhaInterval);
     }
-
-
-});
+})
 
 document.getElementById('gerarSenha').addEventListener('click', function() {
     const senhaGerada = gerarSenha(4);
@@ -61,16 +59,44 @@ document.getElementById('gerarSenha').addEventListener('click', function() {
 
 document.getElementById('check').addEventListener('click', function() {
     let check = document.getElementById('check').checked
-    var display = document.getElementById('boxNumbers').style.display
     if (check) {
         document.getElementById('boxNumbers').style.display = 'flex'
+        document.querySelector('.progress-bar').style.display = 'block'
     } else {
         document.getElementById('boxNumbers').style.display = 'none'
+        document.querySelector('.progress-bar').style.display = 'none'
     }
 })
-
 document.getElementById('copiarSenha').addEventListener('click', copiarSenha);
-
 document.getElementById('copiarResultado').addEventListener('click', copiarResultado);
-
 document.getElementById('inputString').addEventListener('input', converterParaMaiusculas);
+
+
+document.getElementById('inputNumber').addEventListener('input', function iniciarAnimacao() {
+    const progressInner = document.querySelector('.progress-inner');
+    const minutos = parseInt(document.querySelector('.minutos').value) || 0;
+    const segundos = parseInt(document.querySelector('.segundos').value) || 0;
+    const tempoTotal = (minutos * 60 + segundos) * 1000;
+
+    progressInner.style.transition = `width ${tempoTotal}s linear`;
+    progressInner.style.width = '100%'
+
+    setTimeout(() => {
+        progressInner.style.transition = 'none';
+        progressInner.style.width = '0'
+    }, tempoTotal)
+})
+
+
+
+
+document.getElementById('check').addEventListener('click', function() {
+    let check = document.getElementById('check').checked;
+    if (check) {
+        document.getElementById('boxNumbers').style.display = 'flex';
+        document.querySelector('.progress-bar').style.display = 'block';
+    } else {
+        document.getElementById('boxNumbers').style.display = 'none';
+        document.querySelector('.progress-bar').style.display = 'none';
+    }
+})
