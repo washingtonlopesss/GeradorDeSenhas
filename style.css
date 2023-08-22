@@ -9,6 +9,14 @@
     margin: 80px;
 }
 
+body {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 h2 {
     font-size: 20px;
 }
@@ -23,9 +31,9 @@ body {
 }
 
 .container {
+    height: 300px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     text-align: center;
 }
 
@@ -104,6 +112,15 @@ input[type="text"]{
     outline: none;
 }
 
+input[type="number"]{
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    outline: none;
+}
+
 label {
     font-size: 10px;
 }
@@ -132,4 +149,23 @@ label {
 .caixa {
     display: flex;
     margin: 30px 0 0 0;
+}
+
+#boxNumbers {
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#inputNumber {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+#boxSub {
+    font-size: 10px;
 }

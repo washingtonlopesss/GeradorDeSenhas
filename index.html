@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="caneca-de-cerveja.png">
+    <meta name="color-scheme" content="dark">
     <title>Gerador de Senhas e Conversor de Texto</title>
 </head>
 <body>
@@ -12,13 +13,21 @@
     <main class="container">
         <section>
             <h2>Gerar senha</h2>
-            <div class="resultPassword">
-                <input id="senha" type="text"></input>
-                <button id="copiarSenha">Copiar</button>
-            </div>
-            <div class="box">
-                <input type="checkbox" id="check">
-                <label for="check">Atualizar automaticamente?</label>
+            <div>
+                <div class="resultPassword">
+                    <input id="senha" type="text"></input>
+                    <button id="copiarSenha">Copiar</button>
+                </div>
+                <div class="box">
+                    <input type="checkbox" id="check">
+                    <label for="check">Atualizar automaticamente?</label>
+                </div>
+                <div id="boxNumbers">
+                    <p id="boxSub">Minutos:</p>
+                    <input type="number" id="inputNumber" placeholder="mm" value="00" min="00" max="60">
+                    <p id="boxSub">Segundos:</p>
+                    <input type="number" id="inputNumber" placeholder="ss" value="00" min="00" max="60">
+                </div>
             </div>
             <button id="gerarSenha">Gerar Senha</button>
         </section>

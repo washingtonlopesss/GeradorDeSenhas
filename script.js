@@ -45,10 +45,12 @@ document.getElementById('check').addEventListener('click', function() {
         senhaInterval = setInterval(function() {
             const senhaGerada = gerarSenha(4);
             document.getElementById('senha').value = senhaGerada;
-        }, 30000);
+        }, 1000);
     } else {
         clearInterval(senhaInterval);
     }
+
+
 });
 
 document.getElementById('gerarSenha').addEventListener('click', function() {
@@ -56,6 +58,16 @@ document.getElementById('gerarSenha').addEventListener('click', function() {
     document.getElementById('senha').value = senhaGerada;
     document.getElementById('copiarSenha').disabled = false;
 });
+
+document.getElementById('check').addEventListener('click', function() {
+    let check = document.getElementById('check').checked
+    var display = document.getElementById('boxNumbers').style.display
+    if (check) {
+        document.getElementById('boxNumbers').style.display = 'flex'
+    } else {
+        document.getElementById('boxNumbers').style.display = 'none'
+    }
+})
 
 document.getElementById('copiarSenha').addEventListener('click', copiarSenha);
 
