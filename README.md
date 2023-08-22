@@ -4,9 +4,7 @@ Bem-vindo à documentação do projeto Gerador de Senhas & Conversor de Textos. 
 ## Índice
 * Visão Geral
 * Instruções de Uso
-*Tecnologias Utilizadas
 * Estrutura do Código
-*Personalização
 
 ## Visão Geral
 O Gerador de Senhas & Conversor de Textos é um projeto web que permite aos usuários gerar senhas aleatórias e converter texto em maiúsculas. Ele inclui as seguintes funcionalidades:
