@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="caneca-de-cerveja.png">
-    <meta name="color-scheme" content="dark">
+    <link rel="icon" type="image/png" href="./src/assets/caneca-de-cerveja.png">
+    <link rel="stylesheet" href="./src/style.css">
     <title>Gerador de Senhas e Conversor de Texto</title>
 </head>
 <body>
@@ -24,25 +23,30 @@
                 </div>
                 <div id="boxNumbers">
                     <p id="boxSub">Minutos:</p>
-                    <input type="number" class="minutos" id="inputNumber" placeholder="mm" value="00" min="00" max="60">
+                    <input type="number" id="inputMinutes" placeholder="mm" value="00" min="00" max="60">
                     <p id="boxSub">Segundos:</p>
-                    <input type="number" class="segundos" id="inputNumber" placeholder="ss" value="00" min="00" max="60">
+                    <input type="number" id="inputSeconds" placeholder="ss" value="30" min="00" max="60">
                 </div>
             </div>
             <button id="gerarSenha">Gerar Senha</button>
             <div class="progress-bar">   
-                <div class="progress-inner"></div>
+                <div id="progressBar"></div>
             </div>
         </section>
         <section class="convert">
             <h2>Converter em Maiúsculas</h2>
             <input type="text" id="inputString">
             <div class="caixa">
-                <input type="text" id="resultado"></input>
-                <button id="copiarResultado">Copiar</button>
+                <input type="text" id="convertido"></input>
+                <button id="copiarTxtConvertido">Copiar</button>
             </div>
         </section>
     </main>
-    <script src="script.js"></script>
+    <script src="./src/atualizarTemporizador.js"></script>
+    <script src="./src/copiar.js"></script>
+    <script src="./src/geraSenhas.js"></script>
+    <script src="./src/converterString.js"></script>
+    <script src="./src/animacao.js"></script>
+    <script src="./src/capturarInputs.js"></script>
 </body>
 </html>
