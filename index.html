@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="caneca-de-cerveja.png">
+    <link rel="icon" type="image/png" href="assets/images/caneca-de-cerveja.png">
+    <link rel="stylesheet" href="assets/style/style.css">
     <title>Gerador de Senhas e Conversor de Texto</title>
 </head>
 <body>
@@ -12,25 +12,45 @@
     <main class="container">
         <section>
             <h2>Gerar senha</h2>
-            <div class="resultPassword">
-                <input id="senha" type="text"></input>
-                <button id="copiarSenha">Copiar</button>
+            <div>
+                <div class="resultPassword">
+                    <input id="senha" type="text"></input>
+                    <button id="copiarSenha">Copiar</button>
+                </div>
+                <div class="box">
+                    <input type="checkbox" id="check">
+                    <label for="check">Atualizar automaticamente?</label>
+                </div>
+                <div id="boxNumbers">
+                    <p id="boxSub">Minutos:</p>
+                    <input type="number" id="inputMinutes" placeholder="MM" value="00" min="00" max="60">
+                    <p id="boxSub">Segundos:</p>
+                    <input type="number" id="inputSeconds" placeholder="SS" value="30" min="00" max="60">
+                </div>
             </div>
-            <div class="box">
-                <input type="checkbox" id="check">
-                <label for="check">Atualizar automaticamente?</label>
-            </div>
+            <p id="mensagemErro">ERRO! Valor inválido!</p>
             <button id="gerarSenha">Gerar Senha</button>
+            <div class="progress-bar">   
+                <div id="progressBar"></div>
+            </div>
+            <P id="senhaCopiada">Copiado!</P>
         </section>
         <section class="convert">
             <h2>Converter em Maiúsculas</h2>
             <input type="text" id="inputString">
             <div class="caixa">
-                <input type="text" id="resultado"></input>
-                <button id="copiarResultado">Copiar</button>
+                <input type="text" id="convertido"></input>
+                <button id="copiarTxtConvertido">Copiar</button>
             </div>
+            <p id="txtCopiado">Copiado!</p>
         </section>
     </main>
-    <script src="script.js"></script>
+    <script src="assets/js/geraSenhas.js"></script>
+    <script src="assets/js/converterString.js"></script>
+    <script src="assets/js/copiar.js"></script>
+    <script src="assets/js/capturarInputs.js"></script>
+    <script src="assets/js/validacaoDeCampos.js"></script>
+    <script src="assets/js/atualizarTemporizador.js"></script>
+    <script src="assets/js/animacao.js"></script>
 </body>
 </html>

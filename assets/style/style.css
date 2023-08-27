@@ -9,6 +9,14 @@
     margin: 80px;
 }
 
+body {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 h2 {
     font-size: 20px;
 }
@@ -23,9 +31,9 @@ body {
 }
 
 .container {
+    height: 300px;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     text-align: center;
 }
 
@@ -54,7 +62,7 @@ body {
     border-radius: 0;
     padding: 0;
     margin: 0;
-    background-color: brown;
+    background-color: #a52a2a;
     border: none;
     color: #f3f3f3;
 }
@@ -63,7 +71,7 @@ body {
     border-radius: 0;
     padding: 0;
     margin: 0;
-    background-color: brown;
+    background-color: #a52a2a;
     border: none;
     color: #f3f3f3;
     width: 200px;
@@ -86,7 +94,7 @@ body {
     margin: 0;
 }
 
-#resultado {
+#convertido {
     display: flex;
     width: 350px;
     height: 35px;
@@ -99,9 +107,28 @@ input[type="text"]{
     padding: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-    border: 0px solid #ccc;
+    border: none;
     border-radius: 0px;
     outline: none;
+}
+
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: unset;
+  margin: 0;
+  padding: initial;
+  border: 0;
+  background-color: white;
+  font-family: 'Rubik', sans-serif;;
+  text-align: inherit;
+  color: #020201;
+  font-weight: 100;
+  font-size: 12px;
+}
+
+input[type="number"]:focus {
+  outline: none;
 }
 
 label {
@@ -117,19 +144,85 @@ label {
     padding: 0;
 }
 
-#copiarResultado {
+#copiarTxtConvertido {
     width: 60px;
     height: 35px;
     border-radius: 0;
     padding: 0;
     margin: 0;
-    background-color: brown;
+    background-color: #a52a2a;
     border: none;
     color: #f3f3f3;
-    border: none;
 }
 
 .caixa {
     display: flex;
     margin: 30px 0 0 0;
+}
+
+#boxNumbers {
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#inputMinutes, #inputSeconds {
+    width: 35px;
+    height: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+#boxSub {
+    font-size: 12px;
+}
+
+#mensagemErro {
+    display: none;
+    font-size: 12px;
+    color: #a52a2a;
+    margin-top: 0;
+}
+
+#senhaCopiada {
+    display: none;
+    transition: all 1s;
+    color: #f3f3f3;
+    font-size: 12px;
+}
+
+#txtCopiado {
+    display: none;
+    color: #f3f3f3;
+    font-size: 12px;
+}
+
+#copiarSenha:hover,
+#gerarSenha:hover,
+#copiarTxtConvertido:hover {
+    background-color: #831e1e;
+}
+
+.progress-bar {
+    display: none;
+    position: relative;
+    width: 200px;
+    height: 2px;
+    background: #00ff44; 
+    background: linear-gradient(90deg, rgba(0,255,68,1) 16%, rgba(150,121,15,1) 52%, rgba(255,89,58,1) 76%, rgba(165,42,42,1) 100%);
+    overflow: hidden;
+}
+
+#progressBar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #020201;
+    animation: progress-animation var(--animation-duration, 30000ms) linear infinite;
+}
+
+@keyframes progress-animation {
+    0% { left: 0%; }
+    100% { left: 100%; }
 }
