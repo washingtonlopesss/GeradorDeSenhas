@@ -1,10 +1,19 @@
 function validacaoDeCampos() {
-    const mensagemErro = document.getElementById('mensagemErro')
-    if (isNaN(inputValue)) {
-        errorMessage.textContent = "ERRO! Valor invalido!";
-    } else if (inputValue < 0) {
-        errorMessage.textContent = "O número deve ser maior ou igual a zero.";
+    const inputSeconds = parseInt(document.getElementById('inputSeconds').value);
+    const inputMinutes = parseInt(document.getElementById('inputMinutes').value);
+    const mensagemErro = document.getElementById('mensagemErro');
+
+    if ((isNaN(inputMinutes) || isNaN(inputSeconds)) && (inputMinutes <= 0 && inputSeconds <= 0)) {
+        mensagemErro.style.display = 'block';
+        if (inputSeconds <= 0 && inputMinutes <= 0) {
+            alert("O valor deve ser maior que zero!");
+        }
+
     } else {
-        errorMessage.textContent = "";
+        mensagemErro.style.display = 'none';
     }
 }
+
+document.getElementById('check').addEventListener('click', validacaoDeCampos);
+document.getElementById('inputMinutes').addEventListener('blur', validacaoDeCampos);
+document.getElementById('inputSeconds').addEventListener('blur', validacaoDeCampos);

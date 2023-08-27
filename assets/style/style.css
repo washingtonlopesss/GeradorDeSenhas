@@ -122,7 +122,9 @@ input[type="number"] {
   background-color: white;
   font-family: 'Rubik', sans-serif;;
   text-align: inherit;
-  color: #ccc;
+  color: #020201;
+  font-weight: 100;
+  font-size: 12px;
 }
 
 input[type="number"]:focus {
@@ -151,7 +153,6 @@ label {
     background-color: #a52a2a;
     border: none;
     color: #f3f3f3;
-    border: none;
 }
 
 .caixa {
@@ -175,6 +176,13 @@ label {
 
 #boxSub {
     font-size: 12px;
+}
+
+#mensagemErro {
+    display: none;
+    font-size: 12px;
+    color: #a52a2a;
+    margin-top: 0;
 }
 
 .progress-bar {
