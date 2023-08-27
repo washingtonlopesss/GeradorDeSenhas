@@ -62,7 +62,7 @@ body {
     border-radius: 0;
     padding: 0;
     margin: 0;
-    background-color: brown;
+    background-color: #a52a2a;
     border: none;
     color: #f3f3f3;
 }
@@ -71,7 +71,7 @@ body {
     border-radius: 0;
     padding: 0;
     margin: 0;
-    background-color: brown;
+    background-color: #a52a2a;
     border: none;
     color: #f3f3f3;
     width: 200px;
@@ -107,7 +107,7 @@ input[type="text"]{
     padding: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-    border: 0px solid #ccc;
+    border: none;
     border-radius: 0px;
     outline: none;
 }
@@ -185,12 +185,31 @@ label {
     margin-top: 0;
 }
 
+#senhaCopiada {
+    display: none;
+    transition: all 1s;
+    color: #f3f3f3;
+    font-size: 12px;
+}
+
+#txtCopiado {
+    display: none;
+    color: #f3f3f3;
+    font-size: 12px;
+}
+
+#copiarSenha:hover,
+#gerarSenha:hover,
+#copiarTxtConvertido:hover {
+    background-color: #831e1e;
+}
+
 .progress-bar {
     display: none;
     position: relative;
     width: 200px;
     height: 2px;
-    background: rgb(0,255,68); 
+    background: #00ff44; 
     background: linear-gradient(90deg, rgba(0,255,68,1) 16%, rgba(150,121,15,1) 52%, rgba(255,89,58,1) 76%, rgba(165,42,42,1) 100%);
     overflow: hidden;
 }
