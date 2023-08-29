@@ -1,5 +1,3 @@
-let tempoTemporizador
-
 function atualizarTemporizador() {
     let check = document.getElementById('check').checked
     const boxNumbers = document.getElementById('boxNumbers')
@@ -14,6 +12,7 @@ function atualizarTemporizador() {
         boxNumbers.style.display = 'none'
         boxProgressBar.style.display = 'none'
         clearInterval(tempoTemporizador)
+        animating = false
     }
 }
 
