@@ -3,18 +3,16 @@ let tempoTemporizador
 function atualizarTemporizador() {
     let check = document.getElementById('check').checked
     const boxNumbers = document.getElementById('boxNumbers')
-    const progressBar = document.querySelector('.progress-bar')
-    
+    const boxProgressBar = document.querySelector('.box-progress-bar')
+
     if (check) {
         boxNumbers.style.display = 'flex'
-        progressBar.style.display = 'block'
+        boxProgressBar.style.display = 'block'
         clearInterval(tempoTemporizador)
-        tempoTemporizador = setInterval(function() {
-            animacao()
-        }, capturarInputs())
+        tempoTemporizador = setInterval(animacao(), capturarInputs())
     } else {
         boxNumbers.style.display = 'none'
-        progressBar.style.display = 'none'
+        boxProgressBar.style.display = 'none'
         clearInterval(tempoTemporizador)
     }
 }

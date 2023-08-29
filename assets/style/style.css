@@ -204,7 +204,7 @@ label {
     background-color: #831e1e;
 }
 
-.progress-bar {
+.box-progress-bar {
     display: none;
     position: relative;
     width: 200px;
